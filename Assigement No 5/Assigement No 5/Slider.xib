@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Slider" rowHeight="90" id="KGk-i7-Jjw" customClass="Slider" customModule="Assigement_No_5" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1aF-6u-GZu">
+                        <rect key="frame" x="4" y="45" width="312" height="35"/>
+                        <connections>
+                            <action selector="sliderChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="bXq-Zw-Msc"/>
+                        </connections>
+                    </slider>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv0-Mb-dJi">
+                        <rect key="frame" x="6" y="9" width="308" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1aF-6u-GZu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="CsR-zO-97s"/>
+                    <constraint firstAttribute="bottom" secondItem="1aF-6u-GZu" secondAttribute="bottom" constant="5" id="O0e-Pi-K5H"/>
+                    <constraint firstItem="1aF-6u-GZu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Xf0-Yf-Hb7"/>
+                    <constraint firstAttribute="trailing" secondItem="1aF-6u-GZu" secondAttribute="trailing" constant="5" id="mPI-8R-iQz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="Xv0-Mb-dJi" id="5jD-Px-5R3"/>
+                <outlet property="slider" destination="1aF-6u-GZu" id="y9R-pV-2PJ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="81.026785714285708"/>
+        </tableViewCell>
+    </objects>
+</document>
