@@ -18,6 +18,10 @@ class SignUp1ViewController: UIViewController {
         nextButton.buttonDesign()
     }
     @IBAction func nextPressed(_ sender: UIButton) {
+        let  vc  = storyboard?.instantiateViewController(withIdentifier: "SignUp2") as! SignUp2ViewController
+        
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func gender(sender: UIButton){
         if let buttonTitle = sender.title(for: .normal) {

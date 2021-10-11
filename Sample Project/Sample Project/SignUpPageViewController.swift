@@ -25,7 +25,8 @@ class SignUpPageViewController: UIViewController {
         firstNameTextField.textFieldDesign()
         createAccountButton.buttonDesign()
     }
-    @IBAction func createAccountPressed(_ sender: Any) {
+    @IBAction func createAccountPressed(_ sender: UIButton) {
+        print("hello")
         let  vc  = storyboard?.instantiateViewController(withIdentifier: "SignUp1") as! SignUp1ViewController
         
         vc.navigationItem.largeTitleDisplayMode = .never

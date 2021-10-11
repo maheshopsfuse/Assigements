@@ -7,23 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842E245F270D815B008F7B67 /* SignUp4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E245E270D815B008F7B67 /* SignUp4ViewController.swift */; };
 		84598E88270C10D7003978F9 /* DesignTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598E87270C10D7003978F9 /* DesignTemplate.swift */; };
 		84598E8C270C1B02003978F9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84598E8B270C1B02003978F9 /* Launch Screen.storyboard */; };
 		84598E8E270C1C7C003978F9 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598E8D270C1C7C003978F9 /* LaunchScreenViewController.swift */; };
+		845FA3AD2711692000FFBD5C /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA3AC2711692000FFBD5C /* SuccessViewController.swift */; };
+		845FA3AF27116E0A00FFBD5C /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA3AE27116E0A00FFBD5C /* AchievementViewController.swift */; };
+		845FA3B127141D4900FFBD5C /* CircularProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA3B027141D4900FFBD5C /* CircularProgressBarViewController.swift */; };
+		846DAE16271450A5006017B1 /* MarathonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DAE15271450A5006017B1 /* MarathonViewController.swift */; };
+		846DAE1927145BE2006017B1 /* MarathonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DAE1727145BE2006017B1 /* MarathonTableViewCell.swift */; };
+		846DAE1A27145BE2006017B1 /* MarathonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846DAE1827145BE2006017B1 /* MarathonTableViewCell.xib */; };
+		846DAE1D27147113006017B1 /* MarathonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DAE1B27147113006017B1 /* MarathonCollectionViewCell.swift */; };
+		846DAE1E27147113006017B1 /* MarathonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846DAE1C27147113006017B1 /* MarathonCollectionViewCell.xib */; };
+		847587A4270FF54500A77316 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847587A2270FF54500A77316 /* ProfileTableViewCell.swift */; };
+		847587A5270FF54500A77316 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847587A3270FF54500A77316 /* ProfileTableViewCell.xib */; };
+		8475DE9F270ECE63004F6D47 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475DE9E270ECE63004F6D47 /* MainScreenViewController.swift */; };
+		8475DEA1270ECEFB004F6D47 /* GoalScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475DEA0270ECEFB004F6D47 /* GoalScreenViewController.swift */; };
+		8475DEA3270ECF2F004F6D47 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475DEA2270ECF2F004F6D47 /* ProfileScreenViewController.swift */; };
+		847DC8122710553200753CA5 /* Progress1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DC8102710553200753CA5 /* Progress1TableViewCell.swift */; };
+		847DC8132710553200753CA5 /* Progress1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847DC8112710553200753CA5 /* Progress1TableViewCell.xib */; };
+		847DC8162710585300753CA5 /* Progress2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DC8142710585300753CA5 /* Progress2TableViewCell.swift */; };
+		847DC8172710585300753CA5 /* Progress2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847DC8152710585300753CA5 /* Progress2TableViewCell.xib */; };
 		849E8046270C383C00D9D4D4 /* SignUp1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8045270C383C00D9D4D4 /* SignUp1ViewController.swift */; };
 		84A2FF33270ACAF200500117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2FF32270ACAF200500117 /* AppDelegate.swift */; };
 		84A2FF35270ACAF200500117 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2FF34270ACAF200500117 /* SceneDelegate.swift */; };
 		84A2FF37270ACAF200500117 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2FF36270ACAF200500117 /* ViewController.swift */; };
 		84A2FF3A270ACAF200500117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A2FF38270ACAF200500117 /* Main.storyboard */; };
 		84A2FF3C270ACAF300500117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A2FF3B270ACAF300500117 /* Assets.xcassets */; };
+		84BBE2D4270D636C00B8981F /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBE2D3270D636C00B8981F /* SignUp2ViewController.swift */; };
+		84BBE2D6270D67A700B8981F /* SignUp3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBE2D5270D67A700B8981F /* SignUp3ViewController.swift */; };
+		84BBE2D9270D702800B8981F /* AccomplishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBE2D7270D702800B8981F /* AccomplishTableViewCell.swift */; };
+		84BBE2DA270D702800B8981F /* AccomplishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BBE2D8270D702800B8981F /* AccomplishTableViewCell.xib */; };
+		84BDDBBD270DB6090082BF51 /* NewGoal2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDDBBC270DB6090082BF51 /* NewGoal2ViewController.swift */; };
+		84BDDBC0270DB7D40082BF51 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDDBBE270DB7D40082BF51 /* GoalTableViewCell.swift */; };
+		84BDDBC1270DB7D40082BF51 /* GoalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BDDBBF270DB7D40082BF51 /* GoalTableViewCell.xib */; };
+		84BDDBC3270DBCAE0082BF51 /* NewGoal3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDDBC2270DBCAE0082BF51 /* NewGoal3ViewController.swift */; };
+		84BDDBC5270DBCC50082BF51 /* NewGoal4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDDBC4270DBCC50082BF51 /* NewGoal4ViewController.swift */; };
 		84D86243270B4B08002DE5A4 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D86242270B4B08002DE5A4 /* LoginPageViewController.swift */; };
 		84D86245270B4B21002DE5A4 /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D86244270B4B21002DE5A4 /* SignUpPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842E245E270D815B008F7B67 /* SignUp4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp4ViewController.swift; sourceTree = "<group>"; };
 		84598E87270C10D7003978F9 /* DesignTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTemplate.swift; sourceTree = "<group>"; };
 		84598E8B270C1B02003978F9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		84598E8D270C1C7C003978F9 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		845FA3AC2711692000FFBD5C /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		845FA3AE27116E0A00FFBD5C /* AchievementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
+		845FA3B027141D4900FFBD5C /* CircularProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarViewController.swift; sourceTree = "<group>"; };
+		846DAE15271450A5006017B1 /* MarathonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarathonViewController.swift; sourceTree = "<group>"; };
+		846DAE1727145BE2006017B1 /* MarathonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarathonTableViewCell.swift; sourceTree = "<group>"; };
+		846DAE1827145BE2006017B1 /* MarathonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarathonTableViewCell.xib; sourceTree = "<group>"; };
+		846DAE1B27147113006017B1 /* MarathonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarathonCollectionViewCell.swift; sourceTree = "<group>"; };
+		846DAE1C27147113006017B1 /* MarathonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarathonCollectionViewCell.xib; sourceTree = "<group>"; };
+		847587A2270FF54500A77316 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		847587A3270FF54500A77316 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		8475DE9E270ECE63004F6D47 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		8475DEA0270ECEFB004F6D47 /* GoalScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalScreenViewController.swift; sourceTree = "<group>"; };
+		8475DEA2270ECF2F004F6D47 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
+		847DC8102710553200753CA5 /* Progress1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress1TableViewCell.swift; sourceTree = "<group>"; };
+		847DC8112710553200753CA5 /* Progress1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress1TableViewCell.xib; sourceTree = "<group>"; };
+		847DC8142710585300753CA5 /* Progress2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress2TableViewCell.swift; sourceTree = "<group>"; };
+		847DC8152710585300753CA5 /* Progress2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress2TableViewCell.xib; sourceTree = "<group>"; };
 		849E8045270C383C00D9D4D4 /* SignUp1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp1ViewController.swift; sourceTree = "<group>"; };
 		84A2FF2F270ACAF200500117 /* Sample Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A2FF32270ACAF200500117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +77,15 @@
 		84A2FF39270ACAF200500117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84A2FF3B270ACAF300500117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A2FF40270ACAF300500117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84BBE2D3270D636C00B8981F /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
+		84BBE2D5270D67A700B8981F /* SignUp3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp3ViewController.swift; sourceTree = "<group>"; };
+		84BBE2D7270D702800B8981F /* AccomplishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishTableViewCell.swift; sourceTree = "<group>"; };
+		84BBE2D8270D702800B8981F /* AccomplishTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccomplishTableViewCell.xib; sourceTree = "<group>"; };
+		84BDDBBC270DB6090082BF51 /* NewGoal2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoal2ViewController.swift; sourceTree = "<group>"; };
+		84BDDBBE270DB7D40082BF51 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		84BDDBBF270DB7D40082BF51 /* GoalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalTableViewCell.xib; sourceTree = "<group>"; };
+		84BDDBC2270DBCAE0082BF51 /* NewGoal3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoal3ViewController.swift; sourceTree = "<group>"; };
+		84BDDBC4270DBCC50082BF51 /* NewGoal4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoal4ViewController.swift; sourceTree = "<group>"; };
 		84D86242270B4B08002DE5A4 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		84D86244270B4B21002DE5A4 /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +132,33 @@
 				84598E8B270C1B02003978F9 /* Launch Screen.storyboard */,
 				84598E8D270C1C7C003978F9 /* LaunchScreenViewController.swift */,
 				849E8045270C383C00D9D4D4 /* SignUp1ViewController.swift */,
+				84BBE2D3270D636C00B8981F /* SignUp2ViewController.swift */,
+				84BBE2D5270D67A700B8981F /* SignUp3ViewController.swift */,
+				84BBE2D7270D702800B8981F /* AccomplishTableViewCell.swift */,
+				84BBE2D8270D702800B8981F /* AccomplishTableViewCell.xib */,
+				842E245E270D815B008F7B67 /* SignUp4ViewController.swift */,
+				84BDDBBC270DB6090082BF51 /* NewGoal2ViewController.swift */,
+				84BDDBBE270DB7D40082BF51 /* GoalTableViewCell.swift */,
+				84BDDBBF270DB7D40082BF51 /* GoalTableViewCell.xib */,
+				84BDDBC2270DBCAE0082BF51 /* NewGoal3ViewController.swift */,
+				84BDDBC4270DBCC50082BF51 /* NewGoal4ViewController.swift */,
+				8475DE9E270ECE63004F6D47 /* MainScreenViewController.swift */,
+				8475DEA0270ECEFB004F6D47 /* GoalScreenViewController.swift */,
+				8475DEA2270ECF2F004F6D47 /* ProfileScreenViewController.swift */,
+				847587A2270FF54500A77316 /* ProfileTableViewCell.swift */,
+				847587A3270FF54500A77316 /* ProfileTableViewCell.xib */,
+				847DC8102710553200753CA5 /* Progress1TableViewCell.swift */,
+				847DC8112710553200753CA5 /* Progress1TableViewCell.xib */,
+				847DC8142710585300753CA5 /* Progress2TableViewCell.swift */,
+				847DC8152710585300753CA5 /* Progress2TableViewCell.xib */,
+				845FA3AC2711692000FFBD5C /* SuccessViewController.swift */,
+				845FA3AE27116E0A00FFBD5C /* AchievementViewController.swift */,
+				845FA3B027141D4900FFBD5C /* CircularProgressBarViewController.swift */,
+				846DAE15271450A5006017B1 /* MarathonViewController.swift */,
+				846DAE1727145BE2006017B1 /* MarathonTableViewCell.swift */,
+				846DAE1827145BE2006017B1 /* MarathonTableViewCell.xib */,
+				846DAE1B27147113006017B1 /* MarathonCollectionViewCell.swift */,
+				846DAE1C27147113006017B1 /* MarathonCollectionViewCell.xib */,
 			);
 			path = "Sample Project";
 			sourceTree = "<group>";
@@ -141,7 +222,14 @@
 			files = (
 				84A2FF3C270ACAF300500117 /* Assets.xcassets in Resources */,
 				84598E8C270C1B02003978F9 /* Launch Screen.storyboard in Resources */,
+				84BDDBC1270DB7D40082BF51 /* GoalTableViewCell.xib in Resources */,
+				84BBE2DA270D702800B8981F /* AccomplishTableViewCell.xib in Resources */,
+				846DAE1A27145BE2006017B1 /* MarathonTableViewCell.xib in Resources */,
 				84A2FF3A270ACAF200500117 /* Main.storyboard in Resources */,
+				846DAE1E27147113006017B1 /* MarathonCollectionViewCell.xib in Resources */,
+				847DC8172710585300753CA5 /* Progress2TableViewCell.xib in Resources */,
+				847DC8132710553200753CA5 /* Progress1TableViewCell.xib in Resources */,
+				847587A5270FF54500A77316 /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,14 +240,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846DAE16271450A5006017B1 /* MarathonViewController.swift in Sources */,
+				8475DEA3270ECF2F004F6D47 /* ProfileScreenViewController.swift in Sources */,
 				84A2FF37270ACAF200500117 /* ViewController.swift in Sources */,
+				845FA3AF27116E0A00FFBD5C /* AchievementViewController.swift in Sources */,
+				846DAE1D27147113006017B1 /* MarathonCollectionViewCell.swift in Sources */,
+				8475DE9F270ECE63004F6D47 /* MainScreenViewController.swift in Sources */,
 				84598E88270C10D7003978F9 /* DesignTemplate.swift in Sources */,
+				846DAE1927145BE2006017B1 /* MarathonTableViewCell.swift in Sources */,
+				845FA3B127141D4900FFBD5C /* CircularProgressBarViewController.swift in Sources */,
+				8475DEA1270ECEFB004F6D47 /* GoalScreenViewController.swift in Sources */,
 				84D86243270B4B08002DE5A4 /* LoginPageViewController.swift in Sources */,
+				842E245F270D815B008F7B67 /* SignUp4ViewController.swift in Sources */,
 				84A2FF33270ACAF200500117 /* AppDelegate.swift in Sources */,
+				84BBE2D4270D636C00B8981F /* SignUp2ViewController.swift in Sources */,
 				849E8046270C383C00D9D4D4 /* SignUp1ViewController.swift in Sources */,
+				84BDDBC5270DBCC50082BF51 /* NewGoal4ViewController.swift in Sources */,
+				84BDDBC3270DBCAE0082BF51 /* NewGoal3ViewController.swift in Sources */,
 				84A2FF35270ACAF200500117 /* SceneDelegate.swift in Sources */,
+				847587A4270FF54500A77316 /* ProfileTableViewCell.swift in Sources */,
+				84BDDBC0270DB7D40082BF51 /* GoalTableViewCell.swift in Sources */,
+				84BBE2D9270D702800B8981F /* AccomplishTableViewCell.swift in Sources */,
 				84D86245270B4B21002DE5A4 /* SignUpPageViewController.swift in Sources */,
+				847DC8162710585300753CA5 /* Progress2TableViewCell.swift in Sources */,
+				84BBE2D6270D67A700B8981F /* SignUp3ViewController.swift in Sources */,
 				84598E8E270C1C7C003978F9 /* LaunchScreenViewController.swift in Sources */,
+				847DC8122710553200753CA5 /* Progress1TableViewCell.swift in Sources */,
+				845FA3AD2711692000FFBD5C /* SuccessViewController.swift in Sources */,
+				84BDDBBD270DB6090082BF51 /* NewGoal2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
