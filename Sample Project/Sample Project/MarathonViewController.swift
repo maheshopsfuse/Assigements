@@ -23,7 +23,9 @@ class MarathonViewController: UIViewController {
         collectionView.register(MarathonCollectionViewCell.nib(), forCellWithReuseIdentifier: MarathonCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+    }
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
         tableView.reloadData()

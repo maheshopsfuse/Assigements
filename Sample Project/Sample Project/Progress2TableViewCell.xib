@@ -19,32 +19,119 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLX-Dv-q27">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest streak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D2-Lz-VwT">
-                                <rect key="frame" x="46" y="92" width="68.5" height="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest streak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D2-Lz-VwT">
+                                <rect key="frame" x="46" y="92" width="100" height="11"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="11" id="sZE-XE-AGF"/>
+                                    <constraint firstAttribute="height" constant="11" id="H2s-IL-RWn"/>
+                                    <constraint firstAttribute="width" constant="100" id="UQ6-W2-Ri2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-6q-ckH">
-                                <rect key="frame" x="211" y="92" width="49" height="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-6q-ckH">
+                                <rect key="frame" x="188" y="92" width="72" height="11"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="11" id="IJH-Fh-5ns"/>
+                                    <constraint firstAttribute="width" constant="72" id="38D-ZF-YdJ"/>
+                                    <constraint firstAttribute="height" constant="11" id="vwp-Zy-ixh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1k-gR-9vF" customClass="CircleProgressBar">
+                                <rect key="frame" x="68" y="24" width="56" height="56"/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="Mwb-yO-BXB"/>
+                                    <constraint firstAttribute="height" constant="56" id="X1m-lg-Vri"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="1" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressBarWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarProgressColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTrackColor">
+                                        <color key="value" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOV-z3-rSe" customClass="CircleProgressBar">
+                                <rect key="frame" x="196" y="24" width="56" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14/24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzz-q0-1IM">
+                                        <rect key="frame" x="18" y="23" width="26" height="11"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="11" id="swx-DB-KCp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9JI-0m-L9Y"/>
+                                    <constraint firstAttribute="width" constant="56" id="Skk-CH-ODV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressBarWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarProgressColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTrackColor">
+                                        <color key="value" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hintHidden" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="QP2-6q-ckH" firstAttribute="top" secondItem="MLX-Dv-q27" secondAttribute="top" constant="92" id="MrP-t9-7sF"/>
-                            <constraint firstAttribute="trailing" secondItem="QP2-6q-ckH" secondAttribute="trailing" constant="60" id="Qb0-1g-7aS"/>
-                            <constraint firstItem="9D2-Lz-VwT" firstAttribute="leading" secondItem="MLX-Dv-q27" secondAttribute="leading" constant="46" id="RxZ-uC-7ih"/>
-                            <constraint firstItem="9D2-Lz-VwT" firstAttribute="top" secondItem="MLX-Dv-q27" secondAttribute="top" constant="92" id="gDl-Sr-1h6"/>
+                            <constraint firstAttribute="bottom" secondItem="QP2-6q-ckH" secondAttribute="bottom" constant="31" id="1md-Kq-uWX"/>
+                            <constraint firstAttribute="bottom" secondItem="9D2-Lz-VwT" secondAttribute="bottom" constant="31" id="Ezn-6L-VPy"/>
+                            <constraint firstItem="9D2-Lz-VwT" firstAttribute="leading" secondItem="MLX-Dv-q27" secondAttribute="leading" constant="46" id="G0G-9M-myL"/>
+                            <constraint firstItem="tOV-z3-rSe" firstAttribute="top" secondItem="MLX-Dv-q27" secondAttribute="top" constant="24" id="QRX-Dc-A7W"/>
+                            <constraint firstItem="Uzz-q0-1IM" firstAttribute="top" secondItem="MLX-Dv-q27" secondAttribute="top" constant="47" id="RB9-yl-vCT"/>
+                            <constraint firstAttribute="trailing" secondItem="Uzz-q0-1IM" secondAttribute="trailing" constant="80" id="RX6-Bs-bXF"/>
+                            <constraint firstItem="9D2-Lz-VwT" firstAttribute="top" secondItem="Z1k-gR-9vF" secondAttribute="bottom" constant="12" id="Xaa-d3-MbU"/>
+                            <constraint firstAttribute="trailing" secondItem="QP2-6q-ckH" secondAttribute="trailing" constant="60" id="htr-zU-nmx"/>
+                            <constraint firstItem="Z1k-gR-9vF" firstAttribute="leading" secondItem="MLX-Dv-q27" secondAttribute="leading" constant="68" id="iao-di-bkk"/>
+                            <constraint firstAttribute="trailing" secondItem="tOV-z3-rSe" secondAttribute="trailing" constant="68" id="mAo-x1-Czj"/>
+                            <constraint firstItem="Z1k-gR-9vF" firstAttribute="top" secondItem="MLX-Dv-q27" secondAttribute="top" constant="24" id="pTk-Lt-7lb"/>
                             <constraint firstAttribute="height" constant="134" id="pUT-y8-ElX"/>
+                            <constraint firstItem="QP2-6q-ckH" firstAttribute="top" secondItem="tOV-z3-rSe" secondAttribute="bottom" constant="12" id="xnf-zh-O5c"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -56,7 +143,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="35" y="85"/>
+            <point key="canvasLocation" x="89.855072463768124" y="91.741071428571431"/>
         </tableViewCell>
     </objects>
 </document>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,9 @@
 		847DC8132710553200753CA5 /* Progress1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847DC8112710553200753CA5 /* Progress1TableViewCell.xib */; };
 		847DC8162710585300753CA5 /* Progress2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DC8142710585300753CA5 /* Progress2TableViewCell.swift */; };
 		847DC8172710585300753CA5 /* Progress2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847DC8152710585300753CA5 /* Progress2TableViewCell.xib */; };
+		84916DC52715628D008678DB /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84916DC42715628D008678DB /* StepViewController.swift */; };
+		849C8B852715BFAE00621A32 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C8B842715BFAE00621A32 /* ArcView.swift */; };
+		849C8B872715C28900621A32 /* ArcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C8B862715C28900621A32 /* ArcViewController.swift */; };
 		849E8046270C383C00D9D4D4 /* SignUp1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8045270C383C00D9D4D4 /* SignUp1ViewController.swift */; };
 		84A2FF33270ACAF200500117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2FF32270ACAF200500117 /* AppDelegate.swift */; };
 		84A2FF35270ACAF200500117 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2FF34270ACAF200500117 /* SceneDelegate.swift */; };
@@ -45,9 +48,11 @@
 		84BDDBC5270DBCC50082BF51 /* NewGoal4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDDBC4270DBCC50082BF51 /* NewGoal4ViewController.swift */; };
 		84D86243270B4B08002DE5A4 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D86242270B4B08002DE5A4 /* LoginPageViewController.swift */; };
 		84D86245270B4B21002DE5A4 /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D86244270B4B21002DE5A4 /* SignUpPageViewController.swift */; };
+		DC52A45DE4721F8E1298621F /* Pods_Sample_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E7DE16B1CED7E57CF45C73 /* Pods_Sample_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7298F72D7E82FB76FDFCD3C7 /* Pods-Sample Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample Project.release.xcconfig"; path = "Target Support Files/Pods-Sample Project/Pods-Sample Project.release.xcconfig"; sourceTree = "<group>"; };
 		842E245E270D815B008F7B67 /* SignUp4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp4ViewController.swift; sourceTree = "<group>"; };
 		84598E87270C10D7003978F9 /* DesignTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTemplate.swift; sourceTree = "<group>"; };
 		84598E8B270C1B02003978F9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -69,6 +74,9 @@
 		847DC8112710553200753CA5 /* Progress1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress1TableViewCell.xib; sourceTree = "<group>"; };
 		847DC8142710585300753CA5 /* Progress2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress2TableViewCell.swift; sourceTree = "<group>"; };
 		847DC8152710585300753CA5 /* Progress2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress2TableViewCell.xib; sourceTree = "<group>"; };
+		84916DC42715628D008678DB /* StepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
+		849C8B842715BFAE00621A32 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		849C8B862715C28900621A32 /* ArcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcViewController.swift; sourceTree = "<group>"; };
 		849E8045270C383C00D9D4D4 /* SignUp1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp1ViewController.swift; sourceTree = "<group>"; };
 		84A2FF2F270ACAF200500117 /* Sample Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A2FF32270ACAF200500117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +96,8 @@
 		84BDDBC4270DBCC50082BF51 /* NewGoal4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoal4ViewController.swift; sourceTree = "<group>"; };
 		84D86242270B4B08002DE5A4 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		84D86244270B4B21002DE5A4 /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
+		EA995058C610498FD1BDDC1D /* Pods-Sample Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample Project.debug.xcconfig"; path = "Target Support Files/Pods-Sample Project/Pods-Sample Project.debug.xcconfig"; sourceTree = "<group>"; };
+		F3E7DE16B1CED7E57CF45C73 /* Pods_Sample_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,17 +105,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC52A45DE4721F8E1298621F /* Pods_Sample_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171BD3D82BFE4110AC39F471 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA995058C610498FD1BDDC1D /* Pods-Sample Project.debug.xcconfig */,
+				7298F72D7E82FB76FDFCD3C7 /* Pods-Sample Project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4DC694D8008C36A326350124 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3E7DE16B1CED7E57CF45C73 /* Pods_Sample_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84A2FF26270ACAF200500117 = {
 			isa = PBXGroup;
 			children = (
 				84A2FF31270ACAF200500117 /* Sample Project */,
 				84A2FF30270ACAF200500117 /* Products */,
+				171BD3D82BFE4110AC39F471 /* Pods */,
+				4DC694D8008C36A326350124 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +189,9 @@
 				846DAE1827145BE2006017B1 /* MarathonTableViewCell.xib */,
 				846DAE1B27147113006017B1 /* MarathonCollectionViewCell.swift */,
 				846DAE1C27147113006017B1 /* MarathonCollectionViewCell.xib */,
+				84916DC42715628D008678DB /* StepViewController.swift */,
+				849C8B842715BFAE00621A32 /* ArcView.swift */,
+				849C8B862715C28900621A32 /* ArcViewController.swift */,
 			);
 			path = "Sample Project";
 			sourceTree = "<group>";
@@ -170,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A2FF43270ACAF300500117 /* Build configuration list for PBXNativeTarget "Sample Project" */;
 			buildPhases = (
+				50117D7FF5D5E649C23D15F9 /* [CP] Check Pods Manifest.lock */,
 				84A2FF2B270ACAF200500117 /* Sources */,
 				84A2FF2C270ACAF200500117 /* Frameworks */,
 				84A2FF2D270ACAF200500117 /* Resources */,
+				58486FC32B7036AA92C5C5BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +270,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50117D7FF5D5E649C23D15F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sample Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58486FC32B7036AA92C5C5BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sample Project/Pods-Sample Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sample Project/Pods-Sample Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sample Project/Pods-Sample Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84A2FF2B270ACAF200500117 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,6 +321,7 @@
 				8475DEA3270ECF2F004F6D47 /* ProfileScreenViewController.swift in Sources */,
 				84A2FF37270ACAF200500117 /* ViewController.swift in Sources */,
 				845FA3AF27116E0A00FFBD5C /* AchievementViewController.swift in Sources */,
+				849C8B872715C28900621A32 /* ArcViewController.swift in Sources */,
 				846DAE1D27147113006017B1 /* MarathonCollectionViewCell.swift in Sources */,
 				8475DE9F270ECE63004F6D47 /* MainScreenViewController.swift in Sources */,
 				84598E88270C10D7003978F9 /* DesignTemplate.swift in Sources */,
@@ -261,6 +339,8 @@
 				847587A4270FF54500A77316 /* ProfileTableViewCell.swift in Sources */,
 				84BDDBC0270DB7D40082BF51 /* GoalTableViewCell.swift in Sources */,
 				84BBE2D9270D702800B8981F /* AccomplishTableViewCell.swift in Sources */,
+				849C8B852715BFAE00621A32 /* ArcView.swift in Sources */,
+				84916DC52715628D008678DB /* StepViewController.swift in Sources */,
 				84D86245270B4B21002DE5A4 /* SignUpPageViewController.swift in Sources */,
 				847DC8162710585300753CA5 /* Progress2TableViewCell.swift in Sources */,
 				84BBE2D6270D67A700B8981F /* SignUp3ViewController.swift in Sources */,
@@ -403,6 +483,7 @@
 		};
 		84A2FF44270ACAF300500117 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA995058C610498FD1BDDC1D /* Pods-Sample Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -421,6 +502,7 @@
 		};
 		84A2FF45270ACAF300500117 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7298F72D7E82FB76FDFCD3C7 /* Pods-Sample Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

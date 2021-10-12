@@ -1,10 +1,3 @@
-//
-//  CircularProgressBarViewController.swift
-//  Sample Project
-//
-//  Created by Admin on 11/10/21.
-//
-
 import UIKit
 
 class CircularProgressBarViewController: UIViewController {
@@ -12,8 +5,6 @@ class CircularProgressBarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-
 }
 
 @IBDesignable
@@ -30,10 +21,11 @@ class PlainCircularProgressBar: UIView {
     private var progressLayer = CAShapeLayer()
     private var backgroundMask = CAShapeLayer()
 
+    @IBOutlet weak var label: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayers()
-
+        
     }
 
     required init?(coder: NSCoder) {
@@ -50,6 +42,7 @@ class PlainCircularProgressBar: UIView {
         progressLayer.lineWidth = ringWidth
         progressLayer.fillColor = nil
         layer.addSublayer(progressLayer)
+        
         layer.transform = CATransform3DMakeRotation(CGFloat(90 * Double.pi / 180), 0, 0, -1)
     }
 

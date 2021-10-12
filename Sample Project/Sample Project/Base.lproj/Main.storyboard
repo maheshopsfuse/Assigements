@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="puA-km-S9h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdx-MG-OgY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -399,6 +399,9 @@
                                 <state key="normal" title="20k Marathon" image="back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="puA-km-S9h" eventType="touchUpInside" id="0TO-Xj-sCu"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Option" translatesAutoresizingMaskIntoConstraints="NO" id="ecO-ky-zY9">
                                 <rect key="frame" x="384" y="88" width="4" height="16"/>
@@ -498,10 +501,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="3083.7053571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Step View Controller-->
         <scene sceneID="oA7-rV-hbB">
             <objects>
-                <viewController id="N0j-MW-aD4" sceneMemberID="viewController">
+                <viewController id="N0j-MW-aD4" customClass="StepViewController" customModule="Sample_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8N4-R8-24A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -553,15 +556,6 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 12" translatesAutoresizingMaskIntoConstraints="NO" id="gz7-DM-uYk">
-                                        <rect key="frame" x="16" y="314" width="350" height="172"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="172" id="a9i-AE-VRX"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause" translatesAutoresizingMaskIntoConstraints="NO" id="WbX-Ai-TQC">
-                                        <rect key="frame" x="178" y="383" width="26" height="33"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQV-8D-d1o">
                                         <rect key="frame" x="20" y="30" width="342" height="105"/>
                                         <constraints>
@@ -582,23 +576,43 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUs-0h-wHO">
+                                        <rect key="frame" x="16" y="280" width="350" height="172"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="172" id="Gbc-Yj-lIg"/>
+                                        </constraints>
+                                        <state key="normal" image="Rectangle 12"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="N0j-MW-aD4" eventType="touchUpInside" id="QxV-kb-vCN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgf-qJ-bdk">
+                                        <rect key="frame" x="180" y="350" width="26" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="c6H-m6-kv1"/>
+                                        </constraints>
+                                        <state key="normal" image="pause"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="N0j-MW-aD4" eventType="touchUpInside" id="OtQ-Hs-AIv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tQV-8D-d1o" secondAttribute="trailing" constant="20" id="0ja-0q-isW"/>
-                                    <constraint firstAttribute="trailing" secondItem="gz7-DM-uYk" secondAttribute="trailing" constant="16" id="2do-jF-Am4"/>
-                                    <constraint firstItem="gz7-DM-uYk" firstAttribute="leading" secondItem="xWw-g1-V6g" secondAttribute="leading" constant="16" id="IyC-N4-hTH"/>
-                                    <constraint firstItem="M6X-rd-jYA" firstAttribute="top" secondItem="gz7-DM-uYk" secondAttribute="bottom" constant="54" id="QIT-q0-OXd"/>
-                                    <constraint firstItem="WbX-Ai-TQC" firstAttribute="centerX" secondItem="xWw-g1-V6g" secondAttribute="centerX" id="Vwq-ZR-eNI"/>
+                                    <constraint firstItem="qUs-0h-wHO" firstAttribute="leading" secondItem="xWw-g1-V6g" secondAttribute="leading" constant="16" id="Ikq-QD-s1T"/>
+                                    <constraint firstItem="qUs-0h-wHO" firstAttribute="top" secondItem="hbG-LH-tTe" secondAttribute="bottom" constant="18" id="JhR-rK-4lg"/>
+                                    <constraint firstItem="Sgf-qJ-bdk" firstAttribute="leading" secondItem="xWw-g1-V6g" secondAttribute="leading" constant="180" id="Qrx-HD-86t"/>
                                     <constraint firstAttribute="bottom" secondItem="M6X-rd-jYA" secondAttribute="bottom" constant="14" id="XAz-wZ-Y1K"/>
                                     <constraint firstAttribute="trailing" secondItem="hbG-LH-tTe" secondAttribute="trailing" constant="20" id="YU3-cO-vnZ"/>
                                     <constraint firstItem="tQV-8D-d1o" firstAttribute="top" secondItem="xWw-g1-V6g" secondAttribute="top" constant="30" id="a9a-5t-I7u"/>
                                     <constraint firstItem="tQV-8D-d1o" firstAttribute="leading" secondItem="xWw-g1-V6g" secondAttribute="leading" constant="20" id="b00-Ui-bZN"/>
                                     <constraint firstItem="M6X-rd-jYA" firstAttribute="leading" secondItem="xWw-g1-V6g" secondAttribute="leading" constant="10" id="h0K-Lt-vB8"/>
+                                    <constraint firstAttribute="trailing" secondItem="qUs-0h-wHO" secondAttribute="trailing" constant="16" id="kWX-Nc-8qR"/>
                                     <constraint firstAttribute="trailing" secondItem="M6X-rd-jYA" secondAttribute="trailing" constant="10" id="nrH-To-pG3"/>
+                                    <constraint firstItem="Sgf-qJ-bdk" firstAttribute="top" secondItem="hbG-LH-tTe" secondAttribute="bottom" constant="88" id="uMa-qG-cAr"/>
                                     <constraint firstItem="hbG-LH-tTe" firstAttribute="leading" secondItem="xWw-g1-V6g" secondAttribute="leading" constant="20" id="vPo-d7-UcI"/>
                                     <constraint firstItem="hbG-LH-tTe" firstAttribute="top" secondItem="tQV-8D-d1o" secondAttribute="bottom" constant="22" id="yM1-lo-U4Z"/>
-                                    <constraint firstItem="M6X-rd-jYA" firstAttribute="top" secondItem="WbX-Ai-TQC" secondAttribute="bottom" constant="124" id="z3I-Oh-9hm"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -722,21 +736,17 @@
             </objects>
             <point key="canvasLocation" x="1742" y="3084"/>
         </scene>
-        <!--Circular Progress Bar View Controller-->
+        <!--Arc View Controller-->
         <scene sceneID="Knb-0O-zVv">
             <objects>
-                <viewController id="wdx-MG-OgY" customClass="CircularProgressBarViewController" customModule="Sample_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wdx-MG-OgY" customClass="ArcViewController" customModule="Sample_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WDJ-oi-LQl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovk-aV-MOE" customClass="PlainCircularProgressBar" customModule="Sample_Project" customModuleProvider="target">
-                                <rect key="frame" x="87" y="64" width="240" height="240"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="wej-Ss-DOV"/>
-                                    <constraint firstAttribute="height" constant="240" id="xhy-zW-EAH"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovk-aV-MOE" customClass="ArcView" customModule="Sample_Project" customModuleProvider="target">
+                                <rect key="frame" x="94" y="196" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -752,11 +762,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yNB-rf-gFV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ovk-aV-MOE" firstAttribute="centerX" secondItem="WDJ-oi-LQl" secondAttribute="centerX" id="EpJ-gJ-L6Y"/>
-                            <constraint firstItem="ovk-aV-MOE" firstAttribute="top" secondItem="yNB-rf-gFV" secondAttribute="top" constant="20" id="oIN-2a-Lon"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arcView" destination="ovk-aV-MOE" id="vF5-hY-GTC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umT-oq-euo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1837,7 +1846,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="4oT-3q-7Ex">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rtM-mn-Myf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="rtM-mn-Myf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lqL-sn-frP">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1871,9 +1880,6 @@
         <image name="" width="20" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CircleProgressBar
 
 class Progress2TableViewCell: UICollectionViewCell {
     static let identifier = "Progress2TableViewCell"

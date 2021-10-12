@@ -2,6 +2,16 @@ import UIKit
 
 class MainScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    /*var gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.white.cgColor, UIColor.purple.cgColor]//Colors you want to add
+        gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.2)
+        gradientLayer.frame = CGRect.zero
+       return gradientLayer
+    }() */
+    var gradientLayer = CAGradientLayer()
+    
     var data:[[String]] = []
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -20,14 +30,26 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let  vc  = storyboard?.instantiateViewController(withIdentifier: "Marathon") as! MarathonViewController
+        
+        /*vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)*/
+        
+        vc.navigationItem.largeTitleDisplayMode = .never
+        //navigationController?.pushViewController(vc, animated: true)
+        tabBarController?.present(vc, animated: true, completion: nil)
+    }
     
 
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //createGradientLayer()
         tableView.register(ProfileTableViewCell.nib(), forCellReuseIdentifier: ProfileTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -47,8 +69,35 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         if let buttonTitle = button.title(for: .normal) {
             button.setTitle(buttonTitle.uppercased(), for: .normal)
         }
+        //gradientLayer.frame = self.view.bounds
+
+        //self.view.layer.addSublayer(gradientLayer)
+        let colorTop = UIColor(red: 192.0 / 255.0, green: 38.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0).cgColor
+                let colorBottom = UIColor(red: 35.0 / 255.0, green: 2.0 / 255.0, blue: 2.0 / 255.0, alpha: 1.0).cgColor
+        gradientLayer.colors = [colorTop, colorBottom]
         
+        gradientLayer.startPoint = CGPoint(x: 0.2, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.2, y: 0.5)
+
+               //view.layer.addSublayer(gradientLayer)
+               //print(view.layer.zPosition)
+               //print(gradientLayer.zPosition)
+        view.layer.insertSublayer(gradientLayer, at: 0)
+       
         //configureProgressView()
+    }
+    override func viewWillLayoutSubviews() {
+           gradientLayer.frame = CGRect(x: 20, y: 0, width: 380, height: 572)
+       }
+    
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+     
+        gradientLayer.frame = self.view.bounds
+     
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.yellow.cgColor]
+     
+        self.view.layer.addSublayer(gradientLayer)
     }
     func configureProgressView() {
         let img: UIImageView = UIImageView(frame: CGRect(x: 24, y: 285, width: 90, height: 75
