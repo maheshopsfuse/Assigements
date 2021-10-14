@@ -2,7 +2,7 @@ import UIKit
 
 class ArcView: UIView {
     override func draw(_ rect: CGRect) {
-            let arcLayer = CAShapeLayer()
+        let arcLayer = CAShapeLayer()
         let radius = rect.size.width / 2
             /*let radius = rect.size.width / 2
             let lineWidth: CGFloat = 20
@@ -25,20 +25,20 @@ class ArcView: UIView {
         arcLayer.frame = rect
         arcLayer.path = path.cgPath
         
-         let gradientLayer = CAGradientLayer()
-            gradientLayer.frame = rect
-            gradientLayer.colors = [
-                UIColor.orange.cgColor,
-                UIColor.red.cgColor,
-                UIColor.purple.cgColor,
-                UIColor.blue.cgColor
-            ]
-            gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
-            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
-            self.layer.addSublayer(gradientLayer)
-            gradientLayer.mask = arcLayer
-            
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = rect
+        gradientLayer.colors = [
+            UIColor.orange.cgColor,
+            UIColor.red.cgColor,
+            UIColor.purple.cgColor,
+            UIColor.blue.cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+        self.layer.addSublayer(gradientLayer)
+        gradientLayer.mask = arcLayer
+        
+        arcLayer.setAffineTransform(CGAffineTransform(rotationAngle: -2.1))
         path.close()
-        self.transform = CGAffineTransform(rotationAngle: 12.55)
     }
 }

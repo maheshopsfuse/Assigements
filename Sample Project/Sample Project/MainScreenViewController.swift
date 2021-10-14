@@ -2,15 +2,9 @@ import UIKit
 
 class MainScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    /*var gradientLayer: CAGradientLayer = {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.white.cgColor, UIColor.purple.cgColor]//Colors you want to add
-        gradientLayer.startPoint = CGPoint(x: 0, y: 1)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.2)
-        gradientLayer.frame = CGRect.zero
-       return gradientLayer
-    }() */
     var gradientLayer = CAGradientLayer()
+    var shapeLayer = CAShapeLayer()
+
     
     var data:[[String]] = []
 
@@ -69,35 +63,129 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         if let buttonTitle = button.title(for: .normal) {
             button.setTitle(buttonTitle.uppercased(), for: .normal)
         }
-        //gradientLayer.frame = self.view.bounds
-
-        //self.view.layer.addSublayer(gradientLayer)
+    
+        /*let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100, y: 100), radius: CGFloat(20), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+            
+        
         let colorTop = UIColor(red: 192.0 / 255.0, green: 38.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0).cgColor
-                let colorBottom = UIColor(red: 35.0 / 255.0, green: 2.0 / 255.0, blue: 2.0 / 255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 35.0 / 255.0, green: 2.0 / 255.0, blue: 2.0 / 255.0, alpha: 1.0).cgColor
         gradientLayer.colors = [colorTop, colorBottom]
         
-        gradientLayer.startPoint = CGPoint(x: 0.2, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0.2, y: 0.5)
+        gradientLayer.startPoint = CGPoint(x: 0.4, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.4, y: 0.2)
 
                //view.layer.addSublayer(gradientLayer)
                //print(view.layer.zPosition)
                //print(gradientLayer.zPosition)
+        gradientLayer.mask = shapeLayer
         view.layer.insertSublayer(gradientLayer, at: 0)
+        gradientLayer.setAffineTransform(CGAffineTransform(rotationAngle: -2.1)) */
        
         //configureProgressView()
+        subView()
+        bottomSubView()
     }
     override func viewWillLayoutSubviews() {
-           gradientLayer.frame = CGRect(x: 20, y: 0, width: 380, height: 572)
-       }
+          // gradientLayer.frame = CGRect(x: 250, y: 0, width: 380, height: 250)
+    }
     
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
      
         gradientLayer.frame = self.view.bounds
      
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.yellow.cgColor]
+        let colorTop = UIColor(red: 255.0 / 255.0, green: 122 / 255.0, blue: 31 / 255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 255.0 / 255.0, green: 20.0 / 255.0, blue: 3.0 / 255.0, alpha: 1.0).cgColor
+        
+        gradientLayer.colors = [colorTop, colorBottom]
      
         self.view.layer.addSublayer(gradientLayer)
+    }
+    func subView(){
+        let myView = UIView(frame: .init(x: 100, y: 0, width: 400, height: 400))
+
+        view.insertSubview(myView, at: 0)
+
+        let startPoint = CGPoint(x: myView.bounds.minX, y: myView.bounds.midY)
+        let finishPoint = CGPoint(x: myView.bounds.maxX, y: myView.bounds.midY)
+
+        let path = UIBezierPath()
+        path.move(to: startPoint)
+        path.addLine(to: finishPoint)
+        
+       
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: CGFloat(246), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        shapeLayer = CAShapeLayer()
+        
+        shapeLayer.path = circlePath.cgPath
+        
+        /*let gradientMask = CAShapeLayer()
+        let lineHeight = myView.frame.height
+        gradientMask.fillColor = UIColor.clear.cgColor
+        gradientMask.strokeColor = UIColor.black.cgColor
+        gradientMask.lineWidth = lineHeight
+        gradientMask.frame = myView.bounds
+        gradientMask.path = path.cgPath */
+
+        gradientLayer = CAGradientLayer()
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        
+        let colorTop = UIColor(red: 255.0 / 255.0, green: 122 / 255.0, blue: 31 / 255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 1 / 255.0, green: 1 / 255.0, blue: 1 / 255.0, alpha: 1.0).cgColor
+
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.frame = myView.bounds
+        gradientLayer.mask = shapeLayer
+            
+        myView.layer.insertSublayer(gradientLayer, at: 0)
+        
+        //gradientLayer.setAffineTransform(CGAffineTransform(rotationAngle: -12.55))
+        
+        myView.layer.cornerRadius = 10
+        myView.clipsToBounds = true
+        
+        myView.transform = CGAffineTransform(rotationAngle: 2.0)
+    }
+    func bottomSubView()  {
+        let myView = UIView(frame: .init(x: -55.6, y: 300, width: 381, height: 572))
+
+        view.insertSubview(myView, at: 0)
+
+        let startPoint = CGPoint(x: myView.bounds.minX, y: myView.bounds.midY)
+        let finishPoint = CGPoint(x: myView.bounds.maxX, y: myView.bounds.midY)
+
+        let path = UIBezierPath()
+        path.move(to: startPoint)
+        path.addLine(to: finishPoint)
+        
+       
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: -55.6, y: 300), radius: CGFloat(244), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        
+        shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        
+        let colorTop = UIColor(red: 255.0 / 255.0, green: 8 / 255.0, blue: 88 / 255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 28 / 255.0, green: 28 / 255.0, blue: 30 / 255.0, alpha: 1.0).cgColor
+
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.frame = myView.bounds
+        gradientLayer.mask = shapeLayer
+            
+        myView.layer.insertSublayer(gradientLayer, at: 0)
+        
+        //gradientLayer.setAffineTransform(CGAffineTransform(rotationAngle: -12.55))
+        
+        myView.layer.cornerRadius = 10
+        myView.clipsToBounds = true
+        
+        myView.transform = CGAffineTransform(rotationAngle: 0.2)
     }
     func configureProgressView() {
         let img: UIImageView = UIImageView(frame: CGRect(x: 24, y: 285, width: 90, height: 75
