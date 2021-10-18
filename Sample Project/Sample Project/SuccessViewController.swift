@@ -7,7 +7,7 @@ class SuccessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         goalLabel.text = goalLabel.text?.uppercased()
-        runImageView.clipsToBounds = true
+        //runImageView.clipsToBounds = true
         
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{
