@@ -1,18 +1,16 @@
-//
-//  SuccessViewController.swift
-//  Sample Project
-//
-//  Created by Admin on 09/10/21.
-//
-
 import UIKit
 
 class SuccessViewController: UIViewController {
 
+    @IBOutlet weak var runImageView: UIImageView!
+    @IBOutlet weak var goalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        goalLabel.text = goalLabel.text?.uppercased()
+        runImageView.clipsToBounds = true
+        
     }
-
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 }

@@ -1,10 +1,3 @@
-//
-//  SignUpPageViewController.swift
-//  Sample Project
-//
-//  Created by Admin on 04/10/21.
-//
-
 import UIKit
 
 class SignUpPageViewController: UIViewController {
@@ -54,5 +47,7 @@ class SignUpPageViewController: UIViewController {
     @IBAction func backPressed(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 }

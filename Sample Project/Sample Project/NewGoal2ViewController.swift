@@ -1,4 +1,3 @@
-
 import UIKit
 
 class NewGoal2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -17,11 +16,11 @@ class NewGoal2ViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        // 1
+      
         let headerView = UIView()
-        // 2
+       
         headerView.backgroundColor = view.backgroundColor
-        // 3
+       
         return headerView
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -38,6 +37,9 @@ class NewGoal2ViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.layer.cornerRadius = 10
         label.text = label.text?.uppercased()
         
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
     
 }

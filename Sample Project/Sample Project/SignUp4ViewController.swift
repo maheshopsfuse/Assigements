@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 class SignUp4ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -20,9 +18,20 @@ class SignUp4ViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.clipsToBounds = true
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+      
+        let headerView = UIView()
+       
+        headerView.backgroundColor = view.backgroundColor
+       
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
+    
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,5 +42,8 @@ class SignUp4ViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
     }
     @IBAction func backPressed(_ sender: UIButton) {navigationController?.popViewController(animated: true)
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }

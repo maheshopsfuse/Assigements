@@ -1,10 +1,3 @@
-//
-//  ProfileScreenViewController.swift
-//  Sample Project
-//
-//  Created by Admin on 07/10/21.
-//
-
 import UIKit
 
 class ProfileScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -38,7 +31,6 @@ class ProfileScreenViewController: UIViewController, UITableViewDelegate, UITabl
         return 10
     }
     
-
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedBar: UISegmentedControl!
@@ -53,5 +45,8 @@ class ProfileScreenViewController: UIViewController, UITableViewDelegate, UITabl
     }
     @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
         tableView.reloadData()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }

@@ -1,10 +1,3 @@
-//
-//  MarathonViewController.swift
-//  Sample Project
-//
-//  Created by Admin on 11/10/21.
-//
-
 import UIKit
 
 class MarathonViewController: UIViewController {
@@ -23,6 +16,9 @@ class MarathonViewController: UIViewController {
         collectionView.register(MarathonCollectionViewCell.nib(), forCellWithReuseIdentifier: MarathonCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
     @IBAction func backPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

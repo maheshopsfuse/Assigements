@@ -27,11 +27,10 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let  vc  = storyboard?.instantiateViewController(withIdentifier: "Marathon") as! MarathonViewController
         
-        /*vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)*/
+     
         
         vc.navigationItem.largeTitleDisplayMode = .never
-        //navigationController?.pushViewController(vc, animated: true)
+       
         tabBarController?.present(vc, animated: true, completion: nil)
     }
     
@@ -43,7 +42,6 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //createGradientLayer()
         tableView.register(ProfileTableViewCell.nib(), forCellReuseIdentifier: ProfileTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -63,34 +61,13 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         if let buttonTitle = button.title(for: .normal) {
             button.setTitle(buttonTitle.uppercased(), for: .normal)
         }
-    
-        /*let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100, y: 100), radius: CGFloat(20), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = circlePath.cgPath
-            
-        
-        let colorTop = UIColor(red: 192.0 / 255.0, green: 38.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 35.0 / 255.0, green: 2.0 / 255.0, blue: 2.0 / 255.0, alpha: 1.0).cgColor
-        gradientLayer.colors = [colorTop, colorBottom]
-        
-        gradientLayer.startPoint = CGPoint(x: 0.4, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0.4, y: 0.2)
-
-               //view.layer.addSublayer(gradientLayer)
-               //print(view.layer.zPosition)
-               //print(gradientLayer.zPosition)
-        gradientLayer.mask = shapeLayer
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        gradientLayer.setAffineTransform(CGAffineTransform(rotationAngle: -2.1)) */
-       
-        //configureProgressView()
         subView()
+        
         bottomSubView()
     }
-    override func viewWillLayoutSubviews() {
-          // gradientLayer.frame = CGRect(x: 250, y: 0, width: 380, height: 250)
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
-    
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
      
@@ -121,14 +98,6 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         
         shapeLayer.path = circlePath.cgPath
         
-        /*let gradientMask = CAShapeLayer()
-        let lineHeight = myView.frame.height
-        gradientMask.fillColor = UIColor.clear.cgColor
-        gradientMask.strokeColor = UIColor.black.cgColor
-        gradientMask.lineWidth = lineHeight
-        gradientMask.frame = myView.bounds
-        gradientMask.path = path.cgPath */
-
         gradientLayer = CAGradientLayer()
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
@@ -142,7 +111,6 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
             
         myView.layer.insertSublayer(gradientLayer, at: 0)
         
-        //gradientLayer.setAffineTransform(CGAffineTransform(rotationAngle: -12.55))
         
         myView.layer.cornerRadius = 10
         myView.clipsToBounds = true
@@ -180,22 +148,11 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
             
         myView.layer.insertSublayer(gradientLayer, at: 0)
         
-        //gradientLayer.setAffineTransform(CGAffineTransform(rotationAngle: -12.55))
-        
         myView.layer.cornerRadius = 10
         myView.clipsToBounds = true
         
         myView.transform = CGAffineTransform(rotationAngle: 0.2)
     }
-    func configureProgressView() {
-        let img: UIImageView = UIImageView(frame: CGRect(x: 24, y: 285, width: 90, height: 75
-        ))
-        img.backgroundColor = .white
-        img.image = UIImage(named: "man")
-        
-        //progressView.addSubview(img)
-    }
-    
     func tableViewSection() -> Int{
         var numOfSections: Int = 0
         if (data.count > 0)

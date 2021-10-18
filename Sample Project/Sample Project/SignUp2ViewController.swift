@@ -1,10 +1,3 @@
-//
-//  SignUp2ViewController.swift
-//  Sample Project
-//
-//  Created by Admin on 06/10/21.
-//
-
 import UIKit
 
 class SignUp2ViewController: UIViewController {
@@ -25,5 +18,8 @@ class SignUp2ViewController: UIViewController {
     
     @IBAction func backPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }

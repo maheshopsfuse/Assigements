@@ -33,4 +33,7 @@ class LoginPageViewController: UIViewController {
     @IBAction func backPressed(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 }

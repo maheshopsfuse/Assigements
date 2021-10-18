@@ -1,4 +1,3 @@
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -40,5 +39,8 @@ class ViewController: UIViewController {
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
 
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }

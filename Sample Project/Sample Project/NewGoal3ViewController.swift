@@ -1,4 +1,3 @@
-
 import UIKit
 
 class NewGoal3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -16,6 +15,14 @@ class NewGoal3ViewController: UIViewController, UITableViewDelegate, UITableView
         cell.clipsToBounds = true
         return cell
     }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+      
+        let headerView = UIView()
+       
+        headerView.backgroundColor = view.backgroundColor
+       
+        return headerView
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
@@ -29,5 +36,8 @@ class NewGoal3ViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         label.text = label.text?.uppercased()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }

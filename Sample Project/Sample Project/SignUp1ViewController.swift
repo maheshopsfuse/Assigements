@@ -1,4 +1,3 @@
-
 import UIKit
 
 class SignUp1ViewController: UIViewController {
@@ -31,5 +30,8 @@ class SignUp1ViewController: UIViewController {
     }
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }

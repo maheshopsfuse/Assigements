@@ -10,6 +10,9 @@ class ChallengeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 }
 extension ChallengeViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
