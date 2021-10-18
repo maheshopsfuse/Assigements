@@ -9,6 +9,9 @@ import UIKit
 
 class SignUpPageViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var stmtLabel: UILabel!
@@ -19,11 +22,26 @@ class SignUpPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //DesignTemplate.buttonDesign(button: <#T##UIButton#>)
+       
         emailTextField.textFieldDesign()
+        
         passwordTextField.textFieldDesign()
+        
         firstNameTextField.textFieldDesign()
+        
         createAccountButton.buttonDesign()
+        
+        headingLabel.addCharacterSpacing()
+        
+        nameLabel.text = nameLabel.text?.uppercased()
+        nameLabel.addCharacterSpacing()
+        
+        passwordLabel.text = passwordLabel.text?.uppercased()
+        passwordLabel.addCharacterSpacing()
+        
+        emailLabel.text = emailLabel.text?.uppercased()
+        emailLabel.addCharacterSpacing()
+        
     }
     @IBAction func createAccountPressed(_ sender: UIButton) {
         print("hello")

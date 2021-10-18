@@ -16,6 +16,8 @@
 		845FA3B127141D4900FFBD5C /* CircularProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA3B027141D4900FFBD5C /* CircularProgressBarViewController.swift */; };
 		846BF3952716F67F008461BB /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BF3942716F67F008461BB /* LevelViewController.swift */; };
 		846BF3972716FA9D008461BB /* WorkTimingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BF3962716FA9D008461BB /* WorkTimingViewController.swift */; };
+		846BF3992717FBE2008461BB /* Level1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BF3982717FBE2008461BB /* Level1ViewController.swift */; };
+		846BF39B271A99E1008461BB /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BF39A271A99E1008461BB /* ChallengeViewController.swift */; };
 		846DAE16271450A5006017B1 /* MarathonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DAE15271450A5006017B1 /* MarathonViewController.swift */; };
 		846DAE1927145BE2006017B1 /* MarathonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DAE1727145BE2006017B1 /* MarathonTableViewCell.swift */; };
 		846DAE1A27145BE2006017B1 /* MarathonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846DAE1827145BE2006017B1 /* MarathonTableViewCell.xib */; };
@@ -64,6 +66,8 @@
 		845FA3B027141D4900FFBD5C /* CircularProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarViewController.swift; sourceTree = "<group>"; };
 		846BF3942716F67F008461BB /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		846BF3962716FA9D008461BB /* WorkTimingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimingViewController.swift; sourceTree = "<group>"; };
+		846BF3982717FBE2008461BB /* Level1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1ViewController.swift; sourceTree = "<group>"; };
+		846BF39A271A99E1008461BB /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		846DAE15271450A5006017B1 /* MarathonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarathonViewController.swift; sourceTree = "<group>"; };
 		846DAE1727145BE2006017B1 /* MarathonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarathonTableViewCell.swift; sourceTree = "<group>"; };
 		846DAE1827145BE2006017B1 /* MarathonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarathonTableViewCell.xib; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				849C8B862715C28900621A32 /* ArcViewController.swift */,
 				846BF3942716F67F008461BB /* LevelViewController.swift */,
 				846BF3962716FA9D008461BB /* WorkTimingViewController.swift */,
+				846BF3982717FBE2008461BB /* Level1ViewController.swift */,
+				846BF39A271A99E1008461BB /* ChallengeViewController.swift */,
 			);
 			path = "Sample Project";
 			sourceTree = "<group>";
@@ -330,9 +336,11 @@
 				849C8B872715C28900621A32 /* ArcViewController.swift in Sources */,
 				846BF3972716FA9D008461BB /* WorkTimingViewController.swift in Sources */,
 				846DAE1D27147113006017B1 /* MarathonCollectionViewCell.swift in Sources */,
+				846BF3992717FBE2008461BB /* Level1ViewController.swift in Sources */,
 				8475DE9F270ECE63004F6D47 /* MainScreenViewController.swift in Sources */,
 				84598E88270C10D7003978F9 /* DesignTemplate.swift in Sources */,
 				846DAE1927145BE2006017B1 /* MarathonTableViewCell.swift in Sources */,
+				846BF39B271A99E1008461BB /* ChallengeViewController.swift in Sources */,
 				845FA3B127141D4900FFBD5C /* CircularProgressBarViewController.swift in Sources */,
 				8475DEA1270ECEFB004F6D47 /* GoalScreenViewController.swift in Sources */,
 				846BF3952716F67F008461BB /* LevelViewController.swift in Sources */,

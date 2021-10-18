@@ -45,7 +45,6 @@ extension MarathonViewController: UITableViewDelegate, UITableViewDataSource{
         }else{
             cell.configure(text: data[indexPath.row].capitalized)
         }
-        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

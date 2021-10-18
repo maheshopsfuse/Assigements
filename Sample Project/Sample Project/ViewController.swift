@@ -13,13 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //DesignTemplate.buttonDesign(button: loginButton)
-        //DesignTemplate.buttonDesign(button: signUpButton)
-        //DesignTemplate.buttonDesign(button: iconButton)
         loginButton.buttonDesign()
+        
         signUpButton.buttonDesign()
+        
         iconButton.buttonDesign(height: 46)
+        
         headingLabel.addCharacterSpacing(kernValue: 3.0)
+        
+        accountLabel.text = accountLabel.text?.uppercased()
+        accountLabel.addCharacterSpacing(kernValue: 2.0)
+        
+        newLabel.text = newLabel.text?.uppercased()
+        newLabel.addCharacterSpacing(kernValue: 2.0)
     }
 
     @IBAction func loginPressed(_ sender: UIButton) {
@@ -35,5 +41,4 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
 
     }
-    
 }

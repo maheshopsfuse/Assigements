@@ -1,10 +1,3 @@
-//
-//  WorkTimingViewController.swift
-//  Sample Project
-//
-//  Created by Admin on 13/10/21.
-//
-
 import UIKit
 import CircleProgressBar
 
