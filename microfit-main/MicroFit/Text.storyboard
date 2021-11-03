@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="Yal-lo-kEe">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" id="auk-5Q-Eyg" customClass="DashboardViewController" customModule="Parooz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dNC-5k-4R4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fC6-15-L0M">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="267-98-Hio" kind="embed" id="a45-tR-ufR"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pux-uG-YNl">
+                                <rect key="frame" x="0.0" y="808" width="414" height="88"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHD-5w-C25">
+                                        <rect key="frame" x="0.0" y="5" width="414" height="44"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-tL-oS2">
+                                                <rect key="frame" x="0.0" y="10" width="414" height="24"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzh-Tg-zKU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="24"/>
+                                                        <color key="tintColor" name="74777B"/>
+                                                        <state key="normal" image="HomeTab"/>
+                                                        <connections>
+                                                            <action selector="buttonHomeTouchUpInside:" destination="auk-5Q-Eyg" eventType="touchUpInside" id="edw-Wx-lmD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m3-dV-6Cz">
+                                                        <rect key="frame" x="84.666666666666671" y="0.0" width="75.000000000000014" height="24"/>
+                                                        <color key="tintColor" name="74777B"/>
+                                                        <state key="normal" image="ExploreTab"/>
+                                                        <connections>
+                                                            <action selector="buttonExploreTouchUpInside:" destination="auk-5Q-Eyg" eventType="touchUpInside" id="r5b-db-y81"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0E-0n-L8D">
+                                                        <rect key="frame" x="169.66666666666666" y="0.0" width="74.666666666666657" height="24"/>
+                                                        <color key="tintColor" name="74777B"/>
+                                                        <state key="normal" image="MatchTab"/>
+                                                        <connections>
+                                                            <action selector="buttonMatchingTouchUpInside:" destination="auk-5Q-Eyg" eventType="touchUpInside" id="358-Ya-CG9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsF-oh-E3N">
+                                                        <rect key="frame" x="254.33333333333337" y="0.0" width="75" height="24"/>
+                                                        <color key="tintColor" name="74777B"/>
+                                                        <state key="normal" image="MessagesTab"/>
+                                                        <connections>
+                                                            <action selector="buttonMessageTouchUpInside:" destination="auk-5Q-Eyg" eventType="touchUpInside" id="uZs-pw-UUc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZ5-Nh-TYv">
+                                                        <rect key="frame" x="339.33333333333331" y="0.0" width="74.666666666666686" height="24"/>
+                                                        <color key="tintColor" name="74777B"/>
+                                                        <state key="normal" image="User-ProfileTab"/>
+                                                        <connections>
+                                                            <action selector="buttonUserProfileTouchUpInside:" destination="auk-5Q-Eyg" eventType="touchUpInside" id="Nto-2E-307"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lb-ur-zma">
+                                                <rect key="frame" x="306.66666666666669" y="5" width="10" height="10"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="anS-go-nCs"/>
+                                                    <constraint firstAttribute="width" constant="10" id="hmu-pU-JtY"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="SQr-tL-oS2" secondAttribute="trailing" id="9g4-WD-dx9"/>
+                                            <constraint firstAttribute="bottom" secondItem="SQr-tL-oS2" secondAttribute="bottom" constant="10" id="GYJ-a2-cey"/>
+                                            <constraint firstItem="5lb-ur-zma" firstAttribute="top" secondItem="lsF-oh-E3N" secondAttribute="top" constant="-5" id="LA1-Ea-znl"/>
+                                            <constraint firstItem="SQr-tL-oS2" firstAttribute="top" secondItem="mHD-5w-C25" secondAttribute="top" constant="10" id="ekN-Qb-hcz"/>
+                                            <constraint firstItem="5lb-ur-zma" firstAttribute="centerX" secondItem="lsF-oh-E3N" secondAttribute="centerX" constant="20" id="j62-eY-tjN"/>
+                                            <constraint firstItem="SQr-tL-oS2" firstAttribute="leading" secondItem="mHD-5w-C25" secondAttribute="leading" id="tgl-uO-6r3"/>
+                                            <constraint firstAttribute="height" constant="44" id="z3H-qJ-eDG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="gVO-xa-91J"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mHD-5w-C25" firstAttribute="leading" secondItem="gVO-xa-91J" secondAttribute="leading" id="95b-E5-K8c"/>
+                                    <constraint firstItem="mHD-5w-C25" firstAttribute="top" secondItem="Pux-uG-YNl" secondAttribute="top" constant="5" id="jWR-ns-0cJ"/>
+                                    <constraint firstItem="gVO-xa-91J" firstAttribute="trailing" secondItem="mHD-5w-C25" secondAttribute="trailing" id="kvv-JU-lxd"/>
+                                    <constraint firstItem="gVO-xa-91J" firstAttribute="bottom" secondItem="mHD-5w-C25" secondAttribute="bottom" constant="5" id="ry3-7H-5SM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0KO-tG-Nqi"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0KO-tG-Nqi" firstAttribute="trailing" secondItem="Pux-uG-YNl" secondAttribute="trailing" id="3oh-y0-WWe"/>
+                            <constraint firstAttribute="bottom" secondItem="fC6-15-L0M" secondAttribute="bottom" id="B9s-zB-CDJ"/>
+                            <constraint firstItem="fC6-15-L0M" firstAttribute="top" secondItem="dNC-5k-4R4" secondAttribute="top" id="QYv-lV-gJe"/>
+                            <constraint firstAttribute="bottom" secondItem="Pux-uG-YNl" secondAttribute="bottom" id="RSr-y5-wyU"/>
+                            <constraint firstItem="Pux-uG-YNl" firstAttribute="leading" secondItem="0KO-tG-Nqi" secondAttribute="leading" id="WPD-jL-IVv"/>
+                            <constraint firstItem="fC6-15-L0M" firstAttribute="leading" secondItem="0KO-tG-Nqi" secondAttribute="leading" id="e4C-Z8-rd8"/>
+                            <constraint firstItem="0KO-tG-Nqi" firstAttribute="trailing" secondItem="fC6-15-L0M" secondAttribute="trailing" id="tH5-aH-cZ2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonExplore" destination="9m3-dV-6Cz" id="RSg-OV-TRp"/>
+                        <outlet property="buttonHome" destination="Mzh-Tg-zKU" id="CDB-o8-YB2"/>
+                        <outlet property="buttonMatch" destination="B0E-0n-L8D" id="oRS-Ay-ngL"/>
+                        <outlet property="buttonMessage" destination="lsF-oh-E3N" id="GP9-XJ-aHp"/>
+                        <outlet property="buttonUserProfile" destination="xZ5-Nh-TYv" id="J8J-41-nYV"/>
+                        <outlet property="containerBottomTabBar" destination="Pux-uG-YNl" id="sZW-Uj-Kwc"/>
+                        <outlet property="containerNewMessageBadge" destination="5lb-ur-zma" id="7eG-dL-Yrm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fK7-E7-His" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="103"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="bLa-VO-RVZ">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="267-98-Hio" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uk-YV-L3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ExploreTab" width="24" height="24"/>
+        <image name="HomeTab" width="24" height="24"/>
+        <image name="MatchTab" width="24" height="24"/>
+        <image name="MessagesTab" width="24" height="24"/>
+        <image name="User-ProfileTab" width="24" height="24"/>
+        <namedColor name="74777B">
+            <color red="0.45500001311302185" green="0.46700000762939453" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

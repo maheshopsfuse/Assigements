@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUp1ViewController: UIViewController {
+class SignUp1ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
@@ -9,12 +9,17 @@ class SignUp1ViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ageTextField.delegate = self
+        
         maleButton.buttonDesign(align: .left)
         femaleButton.buttonDesign(align: .left)
         otherButton.buttonDesign(align: .left)
         
         ageTextField.textFieldDesign()
         nextButton.buttonDesign()
+        
+        self.hideKeyboardAround()
     }
     @IBAction func nextPressed(_ sender: UIButton) {
         let  vc  = storyboard?.instantiateViewController(withIdentifier: "SignUp2") as! SignUp2ViewController
@@ -33,5 +38,9 @@ class SignUp1ViewController: UIViewController {
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

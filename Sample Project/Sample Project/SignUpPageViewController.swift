@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUpPageViewController: UIViewController {
+class SignUpPageViewController: UIViewController ,UITextFieldDelegate{
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
@@ -8,14 +8,20 @@ class SignUpPageViewController: UIViewController {
     @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var stmtLabel: UILabel!
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
+    
     @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        firstNameTextField.delegate = self
+        
         emailTextField.textFieldDesign()
         
         passwordTextField.textFieldDesign()
@@ -35,6 +41,8 @@ class SignUpPageViewController: UIViewController {
         emailLabel.text = emailLabel.text?.uppercased()
         emailLabel.addCharacterSpacing()
         
+        self.hideKeyboardAround()
+        
     }
     @IBAction func createAccountPressed(_ sender: UIButton) {
         print("hello")
@@ -49,5 +57,9 @@ class SignUpPageViewController: UIViewController {
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

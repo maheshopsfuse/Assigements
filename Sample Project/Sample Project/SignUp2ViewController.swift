@@ -4,6 +4,7 @@ class SignUp2ViewController: UIViewController {
 
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.buttonDesign()

@@ -48,3 +48,14 @@ extension UITextField{
         font = UIFont(name: text!, size: 17)
     }
 }
+extension UIViewController{
+    func hideKeyboardAround()   {
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+}
+

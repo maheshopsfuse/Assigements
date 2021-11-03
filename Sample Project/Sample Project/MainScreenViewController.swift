@@ -21,13 +21,10 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as! ProfileTableViewCell
-        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let  vc  = storyboard?.instantiateViewController(withIdentifier: "Marathon") as! MarathonViewController
-        
-     
         
         vc.navigationItem.largeTitleDisplayMode = .never
        
