@@ -8,20 +8,68 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    enum TableSection: Int {
+        case userList
+        case loader
+    }
+    
+    // 2
+    private let pageLimit = 25
+    private var currentLastId: Int? = nil
+    
+    private var users = [SampleData]() {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    let baseURL = "https://jsonplaceholder.typicode.com/posts/?"
+    
+    let itemsPerBatch = 15
+    
+    var currentRow : Int = 1
+    
+    var url : URL {
+      return URL(string: "\(baseURL)start=\(currentRow)&limit=\(itemsPerBatch)")!
+    }
 
     var data = [SampleData]()
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getData(from: "https://jsonplaceholder.typicode.com/posts",completed: {
+       /* getData(from: "https://jsonplaceholder.typicode.com/posts",completed: {
             self.tableView.reloadData()
         })
-        //postData(from: "https://jsonplaceholder.typicode.com/posts")
+        postData(from: "https://jsonplaceholder.typicode.com/posts") */
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        fetchData()
+        
     }
+    private func fetchData(completed: ((Bool) -> Void)? = nil) {
+        APIManager.shared.getUsers(perPage: pageLimit, sinceId: currentLastId) { [weak self] result in
+            switch result {
+            case .success(let users):
+                self?.users.append(contentsOf: users)
+                // 5
+                // assign last id for next fetch
+                self?.currentLastId = users.last?.id
+                completed?(true)
+            case .failure(let error):
+                print(error.localizedDescription)
+                // 6
+                completed?(false)
+            }
+        }
+    }
+    
     private func getData(from url:String,completed: @escaping ()-> ()){
         
         let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
@@ -57,32 +105,23 @@ class ViewController: UIViewController {
        
         var request = URLRequest(url: url)
         
-        request.httpMethod = "POST"
+        request.httpMethod = "PUT"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        /*let savedData: [String: AnyHashable] = [ "name": "ACME Corporation",
-                          "homePage": "https://www.acme-corp.com",
-                          "phone": "408-867-5309"]
-        let dateData: [String: AnyHashable] = ["type":"Mahesh"]
+        
         let body: [String: AnyHashable] = [
-            "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
-            "name": "Widget Adapter",
-            "releaseDate": dateData,
-            "manufacturer":savedData
-        ]*/
-        let body: [String: AnyHashable] = [
-        "userId": 202,
-        "title": "at nam consequatur ea labore ea harum",
-        "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut",]
+        "userId": 1,
+        "title": "who is to be",
+        "body": "it is the time of life to pursue the things that are to be blamed for the pain of a happy one, nor avoid the pleasures of flattery.",]
         
         request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
         
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else{
                 return
             }
             do {
-                let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                print(response)
+                let resp = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                print(resp)
             }
             catch{
                 print(error.localizedDescription)
@@ -92,20 +131,62 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        // 8
+        guard let listSection = TableSection(rawValue: section) else { return 0 }
+        switch listSection {
+        case .userList:
+            return users.count
+        case .loader:
+            return users.count >= pageLimit ? 1 : 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        guard let section = TableSection(rawValue: indexPath.section) else { return UITableViewCell() }
         
-        cell.textLabel?.text = data[indexPath.row].title
-        
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
+        // 9
+        switch section {
+        case .userList:
+            let repo = users[indexPath.row]
+            cell.textLabel?.text = "\(repo.id)"
+            cell.textLabel?.textColor = .label
+            cell.detailTextLabel?.text = "\(indexPath.row + 1)"
+        case .loader:
+            cell.textLabel?.text = "Loading.."
+            cell.textLabel?.textColor = .systemBlue
+        }
         return cell
     }
     
-    
+    // 10
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let section = TableSection(rawValue: indexPath.section) else { return }
+        guard !users.isEmpty else { return }
+        
+        if section == .loader {
+            print("load new data..")
+            fetchData { [weak self] success in
+                if !success {
+                    self?.hideBottomLoader()
+                }
+            }
+        }
+    }
+    // 11
+    private func hideBottomLoader() {
+        DispatchQueue.main.async {
+            let lastListIndexPath = IndexPath(row: self.users.count - 1, section: TableSection.userList.rawValue)
+            self.tableView.scrollToRow(at: lastListIndexPath, at: .bottom, animated: true)
+        }
+    }
 }
 struct Response: Codable {
     let id, name, releaseDate: String
